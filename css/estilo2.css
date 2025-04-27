@@ -1,0 +1,247 @@
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+/* Layout principal: divide la pantalla en dos mitades */
+.contenedor-principal {
+    display: flex;
+    height: 100vh;
+    flex-direction: row; /* Por defecto es fila (horizontal) */
+}
+
+/* Panel verde al 50% del ancho */
+.panel-verde {
+    flex: 1;
+    background-color: #046A38;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+/* Contenido interno del panel */
+.contenido-interior-verde {
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor-logo {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.logo-licoshop {
+    width: 80px;
+    height: auto;
+}
+
+/* Texto en el panel */
+.contenido-texto-negro {
+    text-align: center;
+    color: black;
+}
+
+.contenido-texto-negro h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.contenido-texto-negro p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Contenedor del formulario con el otro 50% */
+.contenedor-formulario {
+    flex: 1;
+    background-color: #fff8e7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+/* Formulario de inicio de sesión */
+.formulario-login {
+    width: 100%;
+    max-width: 400px;
+}
+
+.formulario-login h2 {
+    font-size: 24px;
+    color: #046A38;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.formulario-login p {
+    color: #6F4E37;
+    margin-bottom: 30px;
+}
+
+.grupo-formulario {
+    margin-bottom: 30px;
+}
+
+.grupo-formulario label {
+    display: block;
+    margin-bottom: 8px;
+    color: #046A38;
+}
+
+.grupo-formulario input {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-bottom: 1px solid #B8860B;
+    font-size: 16px;
+    outline: none;
+    background-color: transparent;
+}
+
+.grupo-formulario input:focus {
+    border-bottom: 2px solid #FFD700;
+}
+
+.divisor {
+    height: 1px;
+    background-color: #b8860b;
+    margin: 25px 0;
+}
+
+/* Botón "Continuar" en negro */
+.boton-principal {
+    width: 100%;
+    padding: 14px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.2s;
+}
+
+.boton-principal:hover {
+    background-color: #333;
+}
+
+.seccion-registro p {
+    color: #046A38;
+    margin-bottom: 15px;
+}
+
+.opciones-registro {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.opcion-casilla {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.opcion-casilla input {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+}
+
+/* Media Queries para Responsive */
+@media (max-width: 768px) {
+    .contenedor-principal {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .panel-verde {
+        padding: 30px 20px;
+        flex: none;
+        height: auto;
+    }
+
+    .contenedor-logo {
+        margin-bottom: 20px;
+    }
+
+    .contenedor-logo img {
+        width: 60px;
+    }
+
+    .contenido-texto-negro h1 {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+
+    .contenido-texto-negro p {
+        font-size: 16px;
+    }
+
+    .contenedor-formulario {
+        padding: 30px 20px;
+        flex: none;
+    }
+
+    .formulario-login {
+        max-width: 100%;
+    }
+
+    .formulario-login h2 {
+        font-size: 20px;
+    }
+
+    .formulario-login p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .grupo-formulario {
+        margin-bottom: 20px;
+    }
+
+    .boton-principal {
+        padding: 12px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .panel-verde {
+        padding: 20px 15px;
+    }
+
+    .contenedor-logo img {
+        width: 50px;
+    }
+
+    .contenido-texto-negro h1 {
+        font-size: 28px;
+    }
+
+    .contenedor-formulario {
+        padding: 25px 15px;
+    }
+
+    .opciones-registro {
+        gap: 10px;
+    }
+}
