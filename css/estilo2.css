@@ -1,4 +1,4 @@
-/* Reset y estilos base */
+
 * {
     margin: 0;
     padding: 0;
@@ -11,14 +11,14 @@ body, html {
     margin: 0;
 }
 
-/* Layout principal: divide la pantalla en dos mitades */
+
 .contenedor-principal {
     display: flex;
     height: 100vh;
-    flex-direction: row; /* Por defecto es fila (horizontal) */
+    flex-direction: row; 
 }
 
-/* Panel verde al 50% del ancho */
+
 .panel-verde {
     flex: 1;
     background-color: #046A38;
@@ -47,7 +47,7 @@ body, html {
     height: auto;
 }
 
-/* Texto en el panel */
+
 .contenido-texto-negro {
     text-align: center;
     color: black;
@@ -64,7 +64,7 @@ body, html {
     line-height: 1.4;
 }
 
-/* Contenedor del formulario con el otro 50% */
+
 .contenedor-formulario {
     flex: 1;
     background-color: #fff8e7;
@@ -75,7 +75,7 @@ body, html {
     overflow-y: auto;
 }
 
-/* Formulario de inicio de sesión */
+
 .formulario-login {
     width: 100%;
     max-width: 400px;
@@ -123,7 +123,7 @@ body, html {
     margin: 25px 0;
 }
 
-/* Botón "Continuar" en negro */
+
 .boton-principal {
     width: 100%;
     padding: 14px;
@@ -165,7 +165,7 @@ body, html {
     height: 18px;
 }
 
-/* Media Queries para Responsive */
+
 @media (max-width: 768px) {
     .contenedor-principal {
         flex-direction: column;
